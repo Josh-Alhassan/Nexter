@@ -49,9 +49,9 @@
   background-size: cover;
 
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
-  row-gap: 1.5rem;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  row-gap: 2.5rem;
   padding-left: 8rem;
   padding-bottom: 8rem;
   padding-right: 8rem;
@@ -65,10 +65,12 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 3rem;
   justify-items: center;
+  align-items: center;
 }
 
 .header__seenon-logos img {
-  height: 2.5rem;
+  max-height: 2.5rem;
+  max-width: 100%;
   filter: brightness(70%);
 }
 
@@ -187,6 +189,7 @@
       rgba(198, 153, 99, 0.5)
     ),
     url(../img/back.jpg);
+  background-size: cover;
 }
 
 .story__img--1 {
